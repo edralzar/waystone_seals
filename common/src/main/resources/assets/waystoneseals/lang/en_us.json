@@ -1,0 +1,13 @@
+{
+  "chat.seal.bound": "Seal now bound to Waystone %s and player %s",
+  "chat.seal.not_owned": "This Seal is bound to another player",
+  "chat.seal.not_owned.waystone": "This Waystone doesn't belong to you",
+  "item.waystoneseals.seal": "Waystone Seal",
+  "item.waystoneseals.blank_seal": "Blank Seal",
+  "item.waystoneseals.seal_remover": "Seal Removing Rod",
+  "tooltip.seal.blank": "Bring this Blank Seal to a Seal Table to configure it.",
+  "tooltip.seal.unbound": "Unbound, sneak-right-click to apply to any Waystone you own.",
+  "tooltip.seal.not_owned": "You do not own this bound Seal.",
+  "tooltip.seal.owned": "Sneak-right-click to apply to a Waystone you own.",
+  "tooltip.seal.rod": "Sneak-right-click on a Waystone you own\nto remove any Seal on it."
+}
