@@ -2,6 +2,7 @@
   "chat.seal.bound": "Seal now bound to Waystone %s and player %s",
   "chat.seal.not_owned": "This Seal is bound to another player",
   "chat.seal.not_owned.waystone": "This Waystone doesn't belong to you",
+  "chat.seal.denied": "The destination is protected by a Seal which prevented your teleportation",
   "item.waystoneseals.seal": "Waystone Seal",
   "item.waystoneseals.blank_seal": "Blank Seal",
   "item.waystoneseals.seal_remover": "Seal Removing Rod",

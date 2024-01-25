@@ -117,8 +117,9 @@ public class SealItem extends Item {
 
     protected Seal createSeal(Player player) {
         //FIXME don't have any configuration by default once the Sealing GUI is done
-        return new SealOfEffects(UUID.randomUUID(), player.getUUID(), new ArrayList<>(),
-                ItemStack.EMPTY, ItemStack.EMPTY, Items.OBSIDIAN.getDefaultInstance(), ItemStack.EMPTY);
+//        return new SealOfEffects(UUID.randomUUID(), player.getUUID(), new ArrayList<>(),
+//                ItemStack.EMPTY, ItemStack.EMPTY, Items.OBSIDIAN.getDefaultInstance(), ItemStack.EMPTY);
+        return new SealOfDenial(UUID.randomUUID(), player.getUUID(), new ArrayList<>());
     }
 
     public Seal getSeal(MinecraftServer server, ItemStack itemStack) {
