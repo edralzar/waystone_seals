@@ -1,18 +1,19 @@
 {
-    "required": true,
-    "minVersion": "0.8",
-    "package": "io.github.edralzar.mods.waystoneseals.mixin",
-    "refmap": "${mod_id}.refmap.json",
-    "compatibilityLevel": "JAVA_17",
-    "mixins": [
-    ],
-    "client": [
-        "RequestEditWaystoneMessageMixin"
-    ],
-    "server": [
-    ],
-    "injectors": {
-        "defaultRequire": 1
-    }
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.edralzar.mods.waystoneseals.mixin",
+  "refmap": "${mod_id}.refmap.json",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+    "SharestoneRendererMixin",
+    "WaystoneRendererMixin"
+  ],
+  "server": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
 }
 
