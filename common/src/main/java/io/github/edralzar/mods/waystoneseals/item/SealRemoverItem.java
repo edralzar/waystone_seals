@@ -53,9 +53,9 @@ public class SealRemoverItem extends Item {
                 SealManager sealManager = SealManager.get(player.getServer());
                 if (sealManager.canRemoveSealFrom(waystone, player) || player.isCreative()) {
                     Seal removedSeal = sealManager.removeSealFrom(waystone);
-                    ItemStack removedSealItem = SealItem.materialize(removedSeal);
+                    ItemStack removedSealItem = SealItem.materialize(removedSeal); //FIXME pop with ingredients
                     if (!removedSealItem.isEmpty()) {
-                        Block.popResource(world, context.getClickedPos(), removedSealItem);
+                        Block.popResourceFromFace(world, context.getClickedPos(), context.getClickedFace(), removedSealItem);
                     }
                 }
                 return InteractionResult.sidedSuccess(world.isClientSide());
