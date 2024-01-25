@@ -21,7 +21,7 @@ public class RenderSealUtils {
 
     public enum BlockOffsets {
         WAYSTONE(1.6f, -0.05f),
-        SHARESTONE(1.83f, -0.01f);
+        SHARESTONE(1.83f, 0.02f);
 
 
         private final float offsetHorizontal;
@@ -36,6 +36,8 @@ public class RenderSealUtils {
     public static void renderSeal(WaystoneBlockEntityBase tileEntity, PoseStack poseStack, MultiBufferSource buffer, int combinedLightIn,
                                   int combinedOverlayIn, BlockOffsets waystoneOffsets) {
         float scale = 0.33f;
+        float offsetY = waystoneOffsets.offsetY;
+        float stoneOffset = waystoneOffsets.offsetHorizontal;
 
         for (int i = 0; i < 4; i++) {
             float angle = i % 2 == 0 ? 0f : 90f; // For alternating faces (0, 90, 0, 90)
@@ -44,18 +46,18 @@ public class RenderSealUtils {
             switch (i) {
                 case 0: // face: default
                     offsetX = 0.5f;
-                    offsetZ = 1f;
+                    offsetZ = 1f + stoneOffset;
                     break;
                 case 1: // face: 90
-                    offsetX = 1f;
+                    offsetX = 1f + stoneOffset;
                     offsetZ = 0.5f;
                     break;
                 case 2: // face: 180
                     offsetX = 0.5f;
-                    offsetZ = 0f;
+                    offsetZ = 0f - stoneOffset;
                     break;
                 case 3: // face: 270
-                    offsetX = 0f;
+                    offsetX = 0f - stoneOffset;
                     offsetZ = 0.5f;
                     break;
                 default:
@@ -64,7 +66,7 @@ public class RenderSealUtils {
             }
 
             poseStack.pushPose();
-            poseStack.translate(offsetX, waystoneOffsets.offsetY, offsetZ + (i % 2 == 0 ? waystoneOffsets.offsetHorizontal : -waystoneOffsets.offsetHorizontal));
+            poseStack.translate(offsetX, offsetY, offsetZ);
             poseStack.mulPose(Axis.YN.rotationDegrees(angle));
             poseStack.scale(scale, scale, scale);
             Minecraft.getInstance().getItemRenderer().renderStatic(SEAL_ITEM_STACK, ItemDisplayContext.FIXED, combinedLightIn, combinedOverlayIn, poseStack, buffer, tileEntity.getLevel(), 0);
