@@ -17,6 +17,9 @@
     "entrypoints": {
         "main": [
           "io.github.edralzar.mods.waystoneseals.FabricSeals"
+        ],
+        "client": [
+            "io.github.edralzar.mods.waystoneseals.client.FabricSealsClient"
         ]
     },
     "mixins": [

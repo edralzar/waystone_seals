@@ -1,6 +1,9 @@
 package io.github.edralzar.mods.waystoneseals.item;
 
-import io.github.edralzar.mods.waystoneseals.api.*;
+import io.github.edralzar.mods.waystoneseals.api.AbstractSeal;
+import io.github.edralzar.mods.waystoneseals.api.Seal;
+import io.github.edralzar.mods.waystoneseals.api.SealManager;
+import io.github.edralzar.mods.waystoneseals.api.SealOfDenial;
 import net.blay09.mods.balm.api.Balm;
 import net.blay09.mods.waystones.api.IWaystone;
 import net.blay09.mods.waystones.block.entity.WaystoneBlockEntityBase;
@@ -18,7 +21,6 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
